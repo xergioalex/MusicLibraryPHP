@@ -1,0 +1,18 @@
+Heavy Metal|
+Pop|
+Power Metal|
+Gothic|
+Electronica|
+Reggae|
+Rock| 
+Rock Alternative|
+Rock And Roll|
+Dance|
+Hip Hop|
+Jazz| 
+Nueva Era|
+Punk|
+Rap|
+Ska|
+Tango|
+Tecno|

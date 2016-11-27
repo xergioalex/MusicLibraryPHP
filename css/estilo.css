@@ -1,0 +1,728 @@
+/* FUENTES PERSONALIZADAS*/
+
+@font-face{
+    font-family: ubuntuRegular;
+    src: url(fuentes/Ubuntu-R.ttf) format('truetype');       
+}
+
+@font-face{
+    font-family: ubuntuBold;
+    src: url(fuentes/Ubuntu-B.ttf) format('truetype');       
+}
+
+@font-face{
+    font-family: ubuntuItalic;
+    src: url(fuentes/Ubuntu-I.ttf) format('truetype');       
+}
+
+@font-face{
+    font-family: ubuntuBoldItalic;
+    src: url(fuentes/Ubuntu-BI.ttf) format('truetype');       
+}
+
+@font-face{
+    font-family: bookMark;
+    src: url(fuentes/bookmark.ttf) format('truetype');
+    
+}
+
+/* FUENTES PERSONALIZADAS */
+
+h1,h2,h3,h4,h5,h6{
+    font-family:ubuntuBold;    
+}
+
+h1{            
+    font-size: 36px;        
+    letter-spacing: 0px;
+    text-shadow: 0px 4px 6px rgba(0,0,0,0.5);
+    padding:0px;
+    display: inline;
+}
+
+h2{                    
+    letter-spacing: 0px;
+    text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+    padding:0px;
+}
+
+p{
+    font-family: ubuntuRegular;
+    padding:0px;    
+}
+
+
+
+/* ESQUELETO */
+
+/* Cabecera de la Pagina */
+
+header{     
+    font-size: 30px;
+    font-family:wrktag;
+    text-align:center;    
+    top: 0;
+    position:absolute;    
+    margin:auto;    
+    width: 99%;        
+    height:100px;
+    left:0.5%;
+    right:0.5%;
+    padding: 0px;       
+    overflow:hidden;
+    box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);    
+    border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -o-border-radius: 0px 0px 15px 15px;      
+}
+
+#headermusic{
+    background: rgba(0,0,255,0.8);        
+}
+
+#headervideo{
+    background: rgba(255,255,0,0.8);
+}
+
+#headerimage{
+    background: rgba(255,0,0,0.8);    
+}
+
+#headermultimedia{
+    color:white;
+    background: rgba(0,0,0,0.9);    
+}
+
+
+/* Menu de Navegacion Header */
+
+#navmusicheader{
+    background:url('../img/navmusic.jpg');
+    background-size: 100% 100%;
+}
+
+#navimageheader{
+    background:url('../img/navimage.jpg');
+    background-size: 100% 100%;
+}
+
+#navvideoheader{
+    background:url('../img/navvideo.jpg');
+    background-size: 100% 100%;    
+}
+
+#navmultimediaheader{
+    background:url('../img/navmultimedia.jpg');
+    background-size: 100% 100%;
+}
+
+header nav{
+    overflow: hidden;
+    display: inline;    
+    padding:10px;
+    margin-top: auto;
+    right:1%;
+    top: 15%;        
+    position:absolute;
+}
+
+header nav ul{
+    position:relative;        
+    font-size: 12px;
+    padding-left: 0px;
+    margin-left: 0px;
+    background-color:grey;
+    color:white;
+    width:50%;
+    font-family:ubuntuRegular;
+    display: inline;    
+}
+
+header nav ul li{
+    display: inline;
+    text-align:center;    
+}
+
+
+
+header nav ul li div{
+    margin: 5px;
+    text-decoration: none;
+    float:right;
+    border:1px solid white;
+    border-radius:  0px 10px 0px 10px;
+    -moz-border-radius:  0px 10px 0px 10px;
+    -webkit-border-radius:  0px 10px 0px 10px;
+    -o-border-radius:  0px 10px 0px 10px;
+    box-shadow: 0px 0px 5px white;
+    -moz-box-shadow: 0px 0px 5px white;
+    -webkit-box-shadow: 0px 0px 5px white;
+    -o-box-shadow: 0px 0px 5px white;    
+    width:55px;
+    height:55px;
+    opacity: 0.5;
+    -moz-transition:opacity 1s;
+    -webkit-transition:opacity 1s;
+    -o-transition:opacity 1s;
+}
+
+header nav ul li div:hover{
+    opacity: 1;
+    box-shadow: 0px 0px 10px white;
+    -moz-box-shadow: 0px 0px 10px white;
+    -webkit-box-shadow: 0px 0px 10px white;
+    -o-box-shadow: 0px 0px 10px white;    
+}
+
+/* Enlace LogOut */
+
+#divlogout{           
+    right:5%;
+    font-size:15px;
+    position: absolute;    
+}
+
+#enlacelogout{
+    color:white;
+    opacity:0.5;
+    text-shadow: 0px 2px 5px white;
+    transition:opacity 5s;
+}
+
+#enlacelogout:hover{    
+    opacity:1;
+    
+}
+
+/* Formulario buscar musica */
+
+#formulariobuscarmusica {
+    margin:auto;
+    width: 50%;
+    height: 25px;
+    top: 20%;
+    left:13%;    
+    position: absolute;
+}
+
+#formulariobuscarmusica input {
+    text-align:left;
+}
+
+#submitformulariobuscarmusica{
+    visibility:hidden;
+}
+
+/* Cuerpo de la Pagina */
+
+body{
+    font-family:ubuntuRegular;
+    margin:auto;
+    padding:0px;    
+}
+
+#cuerpo{         
+    top: 18%;
+    right:1%;    
+    bottom: 11%;
+    margin:auto; 
+    padding: 10px;   
+    position:absolute;
+    width:85%;
+    height: 66%;       
+    border: 1px solid black;
+    box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    
+    border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -o-border-radius: 0px 0px 15px 15px;
+    
+    text-align:center;
+}
+
+/* Menu de Navegacion Multimedia */
+
+#navimage{
+    top: 18%;
+    right: 10%;    
+    bottom: 10%;     
+    padding: 5px; 
+    margin:auto;  
+    position:absolute;
+    width:25%;
+    height:50%;     
+     box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);    
+    border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -o-border-radius: 0px 0px 15px 15px; 
+    background:url('../img/navimage.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;  
+    opacity:0.5;
+    
+    transition:opacity 1s,box-shadow 1s,transform 1s,background 1s;
+    -moz-transition:opacity 1s,box-shadow 1s,-moz-transform 1s,background 1s;
+    -webkit-transition:opacity 1s,box-shadow 1s,-webkit-transform 1s,background 1s;
+    -o-transition:opacity 1s,box-shadow 1s,-o-transform 1s,background 1s;
+    
+    transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    -o-transform: scale(1,1); 
+}
+
+#navvideo{
+    top: 18%;
+    left: 10%;
+    right: 10%;
+    margin:auto;
+    bottom: 10%;     
+    padding: 5px;   
+    position:absolute;
+    width:25%;
+    height:50%;     
+     box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);    
+    border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -o-border-radius: 0px 0px 15px 15px;
+    background:url('../img/navvideo.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity:0.5;        
+    
+    transition:opacity 1s,box-shadow 1s,transform 1s,background 1s;
+    -moz-transition:opacity 1s,box-shadow 1s,-moz-transform 1s,background 1s;
+    -webkit-transition:opacity 1s,box-shadow 1s,-webkit-transform 1s,background 1s;
+    -o-transition:opacity 1s,box-shadow 1s,-o-transform 1s,background 1s;
+    
+    transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    -o-transform: scale(1,1);    
+}
+
+#navmusic{
+    top: 18%;
+    left: 10%;    
+    bottom: 10%;     
+    padding: 5px;
+    margin:auto;   
+    position:absolute;
+    width:25%;
+    height:50%;     
+     box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);    
+    border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -o-border-radius: 0px 0px 15px 15px;                        
+    background:url('../img/navmusic.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity:0.5;
+    
+    transition:opacity 1s,box-shadow 1s,transform 1s,background 1s;
+    -moz-transition:opacity 1s,box-shadow 1s,-moz-transform 1s,background 1s;
+    -webkit-transition:opacity 1s,box-shadow 1s,-webkit-transform 1s,background 1s;
+    -o-transition:opacity 1s,box-shadow 1s,-o-transform 1s,background 1s;
+    
+    transform: scale(1,1);
+    -moz-transform: scale(1,1);
+    -webkit-transform: scale(1,1);
+    -o-transform: scale(1,1);   
+}
+
+#navmusic:hover{    
+    opacity:1;
+    transform:scale(1.1,1.1);
+    -moz-transform:scale(1.1,1.1);
+    -webkit-transform:scale(1.1,1.1);
+    -o-transform:scale(1.1,1.1);
+    
+    box-shadow: 0px 0px 25px blue;
+    -moz-box-shadow: 0px 0px 25px blue;
+    -webkit-box-shadow: 0px 0px 25px blue;
+    -o-box-shadow: 0px 0px 25px blue;
+}
+
+#navvideo:hover{    
+    opacity:1;
+    transform:scale(1.1,1.1);
+    -moz-transform:scale(1.1,1.1);
+    -webkit-transform:scale(1.1,1.1);
+    -o-transform:scale(1.1,1.1);
+    
+    box-shadow: 0px 0px 25px blue;
+    -moz-box-shadow: 0px 0px 25px blue;
+    -webkit-box-shadow: 0px 0px 25px blue;
+    -o-box-shadow: 0px 0px 25px blue;
+}
+
+#navimage:hover{    
+    opacity:1;
+    transform:scale(1.1,1.1);
+    -moz-transform:scale(1.1,1.1);
+    -webkit-transform:scale(1.1,1.1);
+    -o-transform:scale(1.1,1.1);
+    
+    box-shadow: 0px 0px 25px blue;
+    -moz-box-shadow: 0px 0px 25px blue;
+    -webkit-box-shadow: 0px 0px 25px blue;
+    -o-box-shadow: 0px 0px 25px blue;
+}
+
+/* Menu  o Contenido Tangencial */
+
+aside{    
+    display: inline-table;
+    width: 10%;
+    height: 50%;
+    margin-top:auto;      
+    text-align:center;         
+}
+
+aside ul{
+    width: 100%;
+    height:  100%;
+    padding-left: 0;
+    padding-right: 0;
+    color:white;
+    float:left;
+    font-family: ubuntuRegular;
+    font-size:15px;    
+    text-decoration: none;
+    list-style: none;
+}
+
+aside ul li{
+    background:rgba(0,0,0,0.5);
+    width: 100%;
+    text-decoration: none;
+    border: 1px solid blue;
+    border-radius: 0px 5px 0px 5px;    
+    -moz-border-radius: 0px 5px 0px 5px;
+    -webkit-border-radius: 0px 5px 0px 5px;
+    -o-border-radius: 0px 5px 0px 5px;            
+}
+
+aside ul li a{    
+    width: 100%;
+    height: 30px;
+    overflow:hidden;
+    text-decoration: none;    
+}
+
+aside ul li div{
+    width:100%;
+    width:100%;    
+}
+
+aside ul li:hover{
+    background: white;
+    color: black;
+    box-shadow: 0px 0px 25px white;
+    -moz-box-shadow: 0px 0px 25px white;
+    -webkit-box-shadow: 0px 0px 25px white;
+    -o-box-shadow: 0px 0px 25px white;      
+}
+
+#menu{
+    position:absolute;
+    top:20%;
+    bottom:20%;
+    left:1%;
+    float:left;    
+}
+
+#edit{
+    position:absolute;
+    top:20%;
+    bottom:20%;
+    right:1%;
+    float:right;    
+}
+
+
+/* Pie de pagina */
+
+footer{
+    text-align: center;
+    width:99%;
+    height: 50px;
+    padding:0px;
+    left:0.5%;
+    right:0.5%;
+    background:rgba(0,0,255,0.3);
+    bottom: 0;
+    position:absolute; 
+    overflow:hidden;  
+    box-shadow: 0px 5px 35px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 5px 35px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 5px 35px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 5px 35px rgba(0,0,0,0.5);    
+    border-radius: 15px 15px 0px 0px;
+    -moz-border-radius: 15px 15px 0px 0px;
+    -webkit-border-radius: 15px 15px 0px 0px;
+    -o-border-radius: 15px 15px 0px 0px;  
+}
+
+/* Tablas y Formularios */
+
+[required]{
+    border-color:green;
+    box-shadow: 0px 0px 5px green;
+    -moz-box-shadow: 0px 0px 5px green;
+    -webkit-box-shadow: 0px 0px 5px green;
+    -o-box-shadow: 0px 0px 5px green;        
+}
+
+:invalid{
+    border-color:red;
+    box-shadow: 0px 0px 5px red;
+    -moz-box-shadow: 0px 0px 5px red;
+    -webkit-box-shadow: 0px 0px 5px red;
+    -o-box-shadow: 0px 0px 5px red;        
+}
+
+table{
+    width:  100%;
+    border: 0px solid white;
+    padding:  5px;    
+    margin: auto;
+    position: relative;
+    
+}
+
+form table{    
+    width:  100%;
+    border: 0px solid white;
+    padding:  0px;    
+    margin: auto;
+}
+
+form{
+    font-family: ubuntuRegular;
+    color:black;
+    text-shadow:  3px 3px 5px rgba(0,0,0,0.5);
+}
+
+form input,form textarea{
+    font-family:ubuntuRegular;
+    font-size: 12px;
+    background: rgba(255,255,255,0.5);
+    border: 1px dotted white;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+    
+    border-radius: 0px 5px 0px 5px;
+    -moz-border-radius: 0px 5px 0px 5px;
+    -webkit-border-radius: 0px 5px 0px 5px;
+    -o-border-radius: 0px 5px 0px 5px;    
+}
+
+#alignright{
+    text-align:right;
+    right:1%;
+    position:relative;        
+}
+
+#alignleft{
+    text-align:left;
+    left:1%;
+    position:relative;        
+}
+
+
+/* Audio */
+
+#audio{
+    bottom:0px;
+    width:95%;
+    position:absolute;
+    left:1%;
+    right:1%;
+    margin:auto;
+}
+
+
+/* Table */
+
+#divtablas{
+    width: 100%;
+    height: 90%;
+    overflow: scroll;
+    
+    
+}
+
+#divtablas table {
+    width: 100%;        
+     
+}
+
+#divtablas table a{        
+    text-decoration: none;        
+               
+}
+
+#divtablas table a:hover{        
+    text-decoration: none;        
+                
+}
+
+
+#divtablas table td{
+    background: rgba(0,0,0,0.1);
+    border-radius: 0px 5px 0px 5px;    
+    -moz-border-radius: 0px 5px 0px 5px;
+    -webkit-border-radius: 0px 5px 0px 5px;
+    -o-border-radius: 0px 5px 0px 5px;
+    
+}
+
+
+#divformularioagregar{
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    
+}
+
+/* Estilos de los links*/
+a{
+    font-size: 15px;
+    font-family: ubuntuRegular;
+}
+
+a:link {
+    text-decoration:none;
+    color:rgb(0,0,0);
+} 
+
+a:visited {
+    text-decoration:none;
+    color:rgb(0,0,0);
+}
+ 
+a:active {
+    text-decoration:none;
+    color:rgb(0,0,0);
+}
+ 
+a:hover {
+    text-decoration:none;    
+    color:rgb(100,100,100);
+}
+
+
+/* Formulario Login */
+
+#formulariologin{
+    overflow:hidden;
+    top: 18%;
+    right:1%; 
+    left:1%;   
+    bottom: 11%;
+    margin:auto; 
+    padding: 10px;   
+    position:absolute;
+    width:85%;
+    height: 66%;       
+    box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -o-border-radius: 0px 0px 15px 15px;
+    
+    text-align:center;
+}
+
+#tablalogin {    
+    right:1%; 
+    left:1%;   
+    margin:auto; 
+    padding: 10px;   
+    position:absolute;
+    width:30%;
+    height: 66%;       
+    text-align:center;
+            
+}
+
+#tablalogin td{
+    width:100%;
+    height: 30px;    
+    
+}
+
+#submitformulariologin{
+    width: 50%;
+    height: 98%;
+}
+
+#inputtextlogin{
+    font-family: ubuntuRegular;
+    font-size: 15px;
+    width: 70%;
+    height: 100%;
+    text-align:center;   
+}
+
+/* Informe de error */
+
+#error{
+    color:red;
+    background: rgba(255,0,0,0.1);
+    border-radius: 10px 10px 10px 10px;    
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -o-border-radius: 10px 10px 10px 10px;
+    
+}
+
+#formulariousuarionuevo{
+    overflow:scroll;
+    top: 18%;
+    right:1%; 
+    left:1%;   
+    bottom: 11%;
+    margin:auto; 
+    padding: 10px;   
+    position:absolute;
+    width:85%;
+    height: 66%;       
+    box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    -o-box-shadow: 0px 20px 35px rgba(0,0,0,0.5);
+    border-radius: 0px 0px 15px 15px;
+    -moz-border-radius: 0px 0px 15px 15px;
+    -webkit-border-radius: 0px 0px 15px 15px;
+    -o-border-radius: 0px 0px 15px 15px;
+    
+    text-align:center;
+}
+
