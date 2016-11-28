@@ -20,7 +20,7 @@ Creo que con lo anterior resumo muy bien el trabajo por hacer; por otro lado es 
 
 Antes de terminar comparto las instrucciones de instalación, y la demo funcionando en esta url: http://musica.xergioalex.com.
 
-<--- Subiré el proceso de instalación y la demo en otro momento --->
+**<--- Subiré el proceso de instalación y la demo en otro momento --->**
 
 Finalmente como ya he aclarado antes, este fue mi primer acercamiento con el desarrollo web, no van a encontrar un código bonito o bien documentado, ni que siga los mejores estandares y prácticas de desarrollo, solo encontraran los mejores esfuerzos que un estudiante de ciencias de la computación transnochado y agobiado por la carga academíca pudo lograr en breve periodo de tiempo.
 
