@@ -1,5 +1,8 @@
 <?php
 	session_start();
+	$_SESSION['usuario'] = "xergioalex";
+	$_SESSION['contrasena'] = "xergioalex";
+	$_SESSION['permisos'] = 1;
 
 	echo'
     <html>

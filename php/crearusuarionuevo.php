@@ -50,7 +50,7 @@
                 mkdir($directorio.'image/', 0700);
         }
 
-        echo '<meta http-equiv = "REFRESH" content="0;url=../multimedia.php">';
+        echo '<meta http-equiv = "REFRESH" content="0;url=../multimedia.php?usercreated=true">';
     }
 
     // Cerrar
