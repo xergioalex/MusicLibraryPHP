@@ -2,12 +2,13 @@
 
 //-------------------------
 
-	//#########Creacion de tabla de Usuarios###########
-	//conexion
-	$conexion = sqlite_open('../database/multimedia.db') or die('Ha sido imposible establecer la conexion');;
-	//consulta
-	$consulta = 
-	<<<SQL
+	// ######### Creación de la tabla de Usuarios ###########
+
+	// Conexión
+	$conexion = new ProjectDB('../database/multimedia.db') or die('Ha sido imposible establecer la conexión');
+
+	// Consulta
+	$consulta = <<<SQL
 		CREATE TABLE usuarios(
 			usuario Char(40) Primary Key Not Null,
 			contrasena Char(40) Not Null,
@@ -21,69 +22,79 @@
 			permisos Int Not Null
 		);
 SQL;
-	//ejecutar
-	$resultado = sqlite_exec($conexion,$consulta);
-	//cerrar
-	sqlite_close($conexion);
-		
-	
+
+	// Ejecutar
+	$resultado = $conexion->exec($consulta);
+
+	// Cerrar
+	$conexion->close();
+
+
+
 //-------------------------
 
-	//#########Creacion de tabla de Artistas###########
-	//conexion
-	$conexion = sqlite_open('../database/multimedia.db') or die('Ha sido imposible establecer la conexion');;
-	//consulta
-	$consulta = 
-	<<<SQL
+	// ######### Creación de tabla de Artistas ###########
+
+	// Conexión
+	$conexion = new ProjectDB('../database/multimedia.db') or die('Ha sido imposible establecer la conexión');
+
+	// Consulta
+	$consulta = <<<SQL
 		CREATE TABLE artistas(
-			idartista Integer Primary Key,	            		
+			idartista Integer Primary Key,
 			nombre Char(40) Not Null,
 			descripcion Char(1500),
-            numalbumes Integer,
+	        numalbumes Integer,
 			numcanciones Integer,
 			valoracion Integer
 		);
 SQL;
-	//ejecutar
-	$resultado = sqlite_exec($conexion,$consulta);    
-    
-	//cerrar
-	sqlite_close($conexion);		
-	
 
-//-------------------------    
-    
-	//#########Creacion de tabla de Generos###########
-	//conexion
-	$conexion = sqlite_open('../database/multimedia.db') or die('Ha sido imposible establecer la conexion');;
-	//consulta
-	$consulta = 
+	//  Ejecutar
+	$resultado = $conexion->exec($consulta);
+
+	// Cerrar
+	$conexion->close();
+
+
+
+	// #########Creación de tabla de Generos###########
+
+	// Conexión
+	$conexion = new ProjectDB('../database/multimedia.db') or die('Ha sido imposible establecer la conexión');;
+
+	// Consulta
+	$consulta =
 	<<<SQL
 		CREATE TABLE generos(
-			idgenero Integer Primary Key,            
+			idgenero Integer Primary Key,
 			nombre Char(40) Not Null,
 			descripcion Char(1500),
 			numartistas Integer,
-            numcanciones Integer,
-			valoracion Integer			
+	        numcanciones Integer,
+			valoracion Integer
 		);
 SQL;
-	//ejecutar
-	$resultado = sqlite_exec($conexion,$consulta);
-	//cerrar
-	sqlite_close($conexion);
-		
 
-//-------------------------        
-	
-	//#########Creacion de tabla de Albumes###########
-	//conexion
-	$conexion = sqlite_open('../database/multimedia.db') or die('Ha sido imposible establecer la conexion');;
-	//consulta
-	$consulta = 
+	// Ejecutar
+	$resultado = $conexion->exec($consulta);
+
+	// Cerrar
+	$conexion->close();
+
+
+//-------------------------
+
+	// ######### Creación de tabla de Albumes ###########
+
+	// Conexión
+	$conexion = new ProjectDB('../database/multimedia.db') or die('Ha sido imposible establecer la conexión');;
+
+	// Consulta
+	$consulta =
 	<<<SQL
 		CREATE TABLE albumes(
-			idalbum Integer Primary Key,            
+			idalbum Integer Primary Key,
 			nombre Char(40) Not Null,
 			descripcion Char(1500),
 			ano Integer,
@@ -91,66 +102,77 @@ SQL;
 			valoracion Integer
 		);
 SQL;
-	//ejecutar
-	$resultado = sqlite_exec($conexion,$consulta);
-	//cerrar
-	sqlite_close($conexion);
-	
+
+	// Ejecutar
+	$resultado = $conexion->exec($consulta);
+
+	// Cerrar
+	$conexion->close();
+
 
 //-------------------------
-	
-	//#########Creacion de tabla de Canciones###########
-	//conexion
-	$conexion = sqlite_open('../database/multimedia.db') or die('Ha sido imposible establecer la conexion');
-	//consulta
-	$consulta = 
+
+	// ######### Creación de tabla de Canciones ###########
+
+	// Conexión
+	$conexion = new ProjectDB('../database/multimedia.db') or die('Ha sido imposible establecer la conexión');
+
+	// Consulta
+	$consulta =
 	<<<SQL
 		CREATE TABLE canciones(
-			idcancion Integer Primary Key,			
+			idcancion Integer Primary Key,
 			nombre Char(40) Not Null,
 			descripcion Char(1500),
 			duracion Integer,
 			reproducciones Integer,
 			valoracion Integer,
-            url Char(300)			
+	        url Char(300)
 		);
 SQL;
-	//ejecutar
-	$resultado = sqlite_exec($conexion,$consulta);
-	//cerrar
-	sqlite_close($conexion);
-	
-	
-	
-//-------------------------    
-    
-	//#########Creacion de tabla de Relaciones###########
-	//conexion
-	$conexion = sqlite_open('../database/multimedia.db') or die('Ha sido imposible establecer la conexion');;
-	//consulta
-	$consulta = 
+
+	// Ejecutar
+	$resultado = $conexion->exec($consulta);
+
+	// Cerrar
+	$conexion->close();
+
+
+//-------------------------
+
+	// ######### Creación de tabla de Relaciones ###########
+
+	// Conexión
+	$conexion = new ProjectDB('../database/multimedia.db') or die('Ha sido imposible establecer la conexión');;
+
+	// Consulta
+	$consulta =
 	<<<SQL
 		CREATE TABLE relaciones(
-			idrelacion Integer Primary Key ,			
+			idrelacion Integer Primary Key ,
 			idcancion Integer,
-            idalbum Integer,
-            idartista Integer,
-            idgenero Integer
+	        idalbum Integer,
+	        idartista Integer,
+	        idgenero Integer
 		);
 SQL;
-	//ejecutar
-	$resultado = sqlite_exec($conexion,$consulta);
-	//cerrar
-	sqlite_close($conexion);		
+
+	// Ejecutar
+	$resultado = $conexion->exec($consulta);
+
+	// Cerrar
+	$conexion->close();
 
 
-//-------------------------	
-    
-    //#########Creacion de tabla de UsuariosCanciones###########
-	//conexion
-	$conexion = sqlite_open('../database/multimedia.db') or die('Ha sido imposible establecer la conexion');;
-	//consulta
-	$consulta = 
+//-------------------------
+
+	// ######### Creación de tabla de UsuariosCanciones ###########
+
+	// Conexión
+	$conexion = new ProjectDB('../database/multimedia.db') or die('Ha sido imposible establecer la conexión');;
+
+	// Consulta
+	$consulta =
 	<<<SQL
 		CREATE TABLE usuarioscanciones(
 			idusuariocancion Integer Primary Key,
@@ -158,10 +180,12 @@ SQL;
 			idcancion Integer
 		);
 SQL;
-	//ejecutar
-	$resultado = sqlite_exec($conexion,$consulta);
-	//cerrar
-	sqlite_close($conexion);
-	
-	
+
+	// Ejecutar
+	$resultado = $conexion->exec($consulta);
+
+	// Cerrar
+	$conexion->close();
+
+
 ?>

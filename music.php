@@ -1,25 +1,26 @@
+<?php include 'php/projectDB.php'; ?>
+
 <?php
     session_start();
 
     if( isset($_SESSION['usuario'])){
         $usuario = $_SESSION['usuario'];
-        $contrasena= $_SESSION['usuario'];
-        $permisos= $_SESSION['permisos'];
-    }
-    else{
+        $contrasena = $_SESSION['usuario'];
+        $permisos = $_SESSION['permisos'];
+    } else {
         echo '
 		<html>
 			<head>
 				<meta http-equiv = "REFRESH" content="0;url=index.php">
 			</head>
 		<html>';
-
     }
 
-    if(isset($_GET['page']))
-        $page=$_GET['page'];
-    else
-        $page=0;
+    if (isset($_GET['page'])) {
+        $page = $_GET['page'];
+    } else {
+        $page = 0;
+    }
 
 ?>
 
@@ -57,7 +58,11 @@
         	   <ul>
                     <li><a id="inicio" href="music.php"><div>INICIO</div></a></li>
                     <li><a id="canciones" href="music.php?page=1"><div>Canciones</div></a></li>
-                    <?php if($page==1 || $page==12 ){include "includes/music/menueditcanciones.php";} ?>
+                    <?php
+                        if ($page==1 || $page==12 ) {
+                            include "includes/music/menueditcanciones.php";
+                        }
+                    ?>
           		    <li><a id="artistas" href="music.php?page=2"><div>Artistas</div></a></li>
                     <li><a id="albumes" href="music.php?page=3"><div>Albumes</div></a></li>
                     <li><a id="generos" href="music.php?page=4"><div>Generos</div></a></li>
@@ -85,6 +90,7 @@
 
         </div>
         <footer>
+            <br>
             (c) 2012 - Sergio Alexander Florez Galeano
         </footer>
     </body>

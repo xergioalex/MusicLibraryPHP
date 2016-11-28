@@ -14,6 +14,4 @@
         closedir($handle);
         rmdir($path);
     }
-    
-     
 ?>

@@ -1,62 +1,66 @@
+<?php include '../projectDB.php'; ?>
+
 <?php
 	session_start();
-	//Remover registro favorito
-	//$usuario = $_SESSION['usuario'];
-	//$contrasena = $_SESSION['contrasena'];
+	// Remover registro favorito
+	// $usuario = $_SESSION['usuario'];
+	// $contrasena = $_SESSION['contrasena'];
     $usuario = 'xergio';
 	$contrasena = 'xergio';
 	$idalbum = $_GET['idalbum'];
-	
-    //Conectar
-	$conexion = sqlite_open('../../database/multimedia.db');
-    
-    //Obtengo los datos de la ruta
+
+    // Conectar
+	$conexion = new ProjectDB('../../database/multimedia.db') or die('Ha sido imposible establecer la conexión');
+
+    // Obtengo los datos de la ruta
         $consultacancion = 'SELECT * FROM canciones WHERE idalbum='.$idalbum.' AND usuario="'.$usuario.'" LIMIT 1';
-    	$resultadocancion = sqlite_query($conexion,$consultacancion);
-        while($fila=sqlite_fetch_array($resultadocancion)){
+    	$resultadocancion = $conexion->query($consultacancion);
+        while($fila=$resultadocancion->fetchArray(SQLITE3_ASSOC)){
             $consultaartista = 'SELECT * FROM artistas WHERE idartista='.$fila['idartista'].' AND usuario="'.$usuario.'" LIMIT 1';
-            $resultadoartista = sqlite_query($conexion,$consultaartista);
-        	$artista = sqlite_fetch_array($resultadoartista);
-            
+            $resultadoartista = $conexion->query($consultaartista);
+        	$artista = $resultadoartista->fetchArray(SQLITE3_ASSOC);
+
             $consultagenero = 'SELECT * FROM generos WHERE idgenero='.$fila['idgenero'].' AND usuario="'.$usuario.'" LIMIT 1';
-            $resultadogenero = sqlite_query($conexion,$consultagenero);
-        	$genero = sqlite_fetch_array($resultadogenero);
-            
+            $resultadogenero = $conexion->query($consultagenero);
+        	$genero = $resultadogenero->fetchArray(SQLITE3_ASSOC);
+
             $consultaalbum = 'SELECT * FROM albumes WHERE idalbum='.$idalbum.' AND usuario="'.$usuario.'" LIMIT 1';
-            $resultadoalbum = sqlite_query($conexion,$consultaalbum);
-        	$album = sqlite_fetch_array($resultadoalbum);    
-            
-            //Eliminar Carpeta
+            $resultadoalbum = $conexion->query($consultaalbum);
+        	$album = $resultadoalbum->fetchArray(SQLITE3_ASSOC);
+
+            // Eliminar Carpeta
             include 'eliminarcarpetacompleta.php';
             $path = '../usersdb/'.$usuario.'/'.'music/'.$genero['genero'].'/'.$artista['artista'].'/'.$album['album'].'/';
             if(is_dir($path))
-                rmdir_recurse($path);            
+                rmdir_recurse($path);
         }
-                                    
-	//Eliminar el album
-	$consulta = "DELETE FROM albumes WHERE idalbum=".$idalbum." AND usuario='".$usuario."' "; 
-	$resultado = sqlite_query($conexion,$consulta);   
-    
-    	
-	//Eliminar las canciones del album
+
+	// Eliminar el album
+	$consulta = "DELETE FROM albumes WHERE idalbum=".$idalbum." AND usuario='".$usuario."' ";
+	$resultado = $conexion->query($consulta);
+
+
+	// Eliminar las canciones del album
     $consulta = 'SELECT * FROM canciones WHERE idalbum='.$idalbum.' AND usuario="'.$usuario.'" ';
-   	$resultado = sqlite_query($conexion,$consulta);
-    
-    while($fila = sqlite_fetch_array($resultado)){
+   	$resultado = $conexion->query($consulta);
+
+    while($fila = $resultado->fetchArray(SQLITE3_ASSOC)){
         //Eliminar cancion
         $consultaeliminar = "DELETE FROM canciones WHERE idcancion=".$fila['idcancion']." AND usuario='".$usuario."' ";
-        $resultado = sqlite_query($conexion,$consultaeliminar);
-    }               	    
-	
-	sqlite_close($conexion);
+        $resultado = $conexion->query($consultaeliminar);
+    }
+
+	// Cerrar
+    $conexion->close();
+
 	/*
-	//Y vuelvo	
+	//Y vuelvo
 	echo "
 		<html>
 			<head>
 				<meta http-equiv = 'REFRESH' content='0;url=../music.php?page=3'>
 			</head>
-		<html>		
+		<html>
 	";
 	*/
 ?>

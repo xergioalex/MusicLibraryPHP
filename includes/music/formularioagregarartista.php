@@ -12,7 +12,7 @@
                     <td id="alignleft"><span id="error">El Artista ya existe<span></td>
                 </tr>';
             }
-        ?>          
+        ?>
         <tr>
             <td id="alignright">Introduce una descripcion</td>
             <td id="alignleft"><textarea name="descripcion" cols="40" rows='6' ></textarea></td>
@@ -25,6 +25,6 @@
             <td id="alignright"></td>
             <td id="alignleft"><input type="submit" value="Enviar"/></td>
         </tr>
-        
+
     </table>
 </form>

@@ -1,7 +1,9 @@
+<?php include 'php/projectDB.php'; ?>
+
 <?php
     session_start();
 
-    if( isset($_SESSION['usuario'])){
+    if (isset($_SESSION['usuario'])) {
         $usuario = $_SESSION['usuario'];
         $contrasena= $_SESSION['usuario'];
         $permisos= $_SESSION['permisos'];
@@ -16,10 +18,11 @@
 
     }
 
-    if(isset($_GET['page']))
+    if (isset($_GET['page'])) {
         $page=$_GET['page'];
-    else
+    } else {
         $page=0;
+    }
 
 ?>
 
@@ -37,7 +40,7 @@
             <section id="logotipo">
                 <div id="logo"></div>
                 <div id="formulariobuscarmusica">
-                    <?php include "includes/music/formulariobuscarmusica.php"; ?>
+                    <?php //include "includes/music/formulariobuscarmusica.php"; ?>
                 </div>
                 <div id="logout">
                     <?php include "includes/enlacelogout.php"; ?>
@@ -52,33 +55,22 @@
                 </ul>
             </nav>
         </header>
-        <aside id="menu">
+        <!-- <aside id="menu">
                <h2 id="tituloMenu">Men&uacute;</h2>
         	   <ul>
                     <li><a id="inicio" href="music.php"><div>INICIO</div></a></li>
                     <li><a id="canciones" href="music.php?page=1"><div>Canciones</div></a></li>
-                    <?php if($page==1 || $page==12 ){include "includes/music/menueditcanciones.php";} ?>
+                    <?php //if($page==1 || $page==12 ){include "includes/music/menueditcanciones.php";} ?>
           		    <li><a id="artistas" href="music.php?page=2"><div>Artistas</div></a></li>
                     <li><a id="albumes" href="music.php?page=3"><div>Albumes</div></a></li>
                     <li><a id="generos" href="music.php?page=4"><div>Generos</div></a></li>
                	</ul>
-        </aside>
-        <div id="cuerpo">
+        </aside> -->
+        <div id="cuerpo" style="width:96%">
 
             <?php
                 switch($page){
-                    case 1: include "includes/music/canciones.php"; break;
-                    case 11: include "includes/music/cancionesalbum.php"; break;
-                    case 12: include "includes/music/formularioagregarcancion.php"; break;
-                    case 13: include "includes/music/cancionesgenero.php"; break;
-                    case 2: include "includes/music/artistas.php"; break;
-                    case 22: include "includes/music/formularioagregarartista.php"; break;
-                    case 3: include "includes/music/albumes.php"; break;
-                    case 31: include "includes/music/albumesartista.php"; break;
-                    case 32: include "includes/music/formularioagregaralbum.php"; break;
-                    case 4: include "includes/music/generos.php"; break;
-                    case 42: include "includes/music/formularioagregargenero.php"; break;
-                    default: include "includes/music/inicio.php";  break;
+                    default: include "includes/image/inicio.php";  break;
                 }
             ?>
 

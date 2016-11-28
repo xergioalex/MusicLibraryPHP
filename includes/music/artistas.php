@@ -1,37 +1,38 @@
 <?php
-//VER Artistas
-echo '<div id="divtablas">';
-	$conexion = sqlite_open('database/multimedia.db');
-	
+    // VER Artistas
+    echo '<div id="divtablas">';
+
+	$conexion = new ProjectDB('database/multimedia.db') or die('No se pudo establecer conexion');
+
     echo 'ARTISTAS';
-	echo '<table border="0" >		
+	echo '<table border="0" >
 		<tr><td width=30%>Artista</td>
             <td width=5%>#Albums</td>
-            <td width=5%>#Songs</td>            
+            <td width=5%>#Songs</td>
             <td width=5%>Rank</td>
-        </tr>';	
-    
-    //Consulta    
-    $consulta = 'SELECT DISTINCT ar.idartista,ar.nombre,ar.numalbumes,ar.numcanciones,ar.valoracion
-                          FROM usuarioscanciones AS uc INNER JOIN relaciones AS r ON uc.idcancion = r.idcancion                                                        
-                                                       INNER JOIN artistas AS ar ON r.idartista = ar.idartista                                                       
+        </tr>';
+
+    //Consulta
+    $consulta = 'SELECT DISTINCT ar.idartista as ar_idartista,ar.nombre as ar_nombre,ar.numalbumes as ar_numalbumes,ar.numcanciones as ar_numcanciones,ar.valoracion as ar_valoracion
+                          FROM usuarioscanciones AS uc INNER JOIN relaciones AS r ON uc.idcancion = r.idcancion
+                                                       INNER JOIN artistas AS ar ON r.idartista = ar.idartista
                                                        WHERE uc.usuario="'.$usuario.'"';
-        
-    $resultado = sqlite_query($conexion,$consulta); 
-        
-    while($fila = sqlite_fetch_array($resultado)){
-         echo 
-         '<tr>            
-            <td><a href="music.php?page=31&artista='.$fila['ar.idartista'].'"><div>'.$fila['ar.nombre'].'</div></a></td>
-            <td>'.$fila['ar.numalbumes'].'</td>
-            <td>'.$fila['ar.numcanciones'].'</td>
-            <td>'.$fila['ar.valoracion'].'</td>            		
+
+    $resultado = $conexion->query($consulta);
+
+    while ($fila = $resultado->fetchArray(SQLITE3_ASSOC)) {
+         echo
+         '<tr>
+            <td><a href="music.php?page=31&artista='.$fila['ar_idartista'].'"><div>'.$fila['ar_nombre'].'</div></a></td>
+            <td>'.$fila['ar_numalbumes'].'</td>
+            <td>'.$fila['ar_numcanciones'].'</td>
+            <td>'.$fila['ar_valoracion'].'</td>
          </tr>';
     }
-             
+
     echo '</table>';
-    
-	sqlite_close($conexion);
-    
-echo '</div>';    
+
+	$conexion->close();
+
+    echo '</div>';
  ?>
