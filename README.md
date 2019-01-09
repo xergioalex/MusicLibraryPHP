@@ -1,5 +1,8 @@
 # Librería Musical en PHP
 
+![Página de inicio](demo/home.gif)
+
+
 ### Historia
 
 Llevo casi 10 años desarrollando para la web, pero como todos no nací aprendido; hace poco estuve desempolvando mis archivos de la Universidad y me encontre con la primera web que desarrollé, hace ya mucho mucho tiempo, era parte del proyecto final del curso de bases de datos, en la cual debía desarrollar algún sistema que permitiera aplicar todos los conocimientos adquiridos durante el curso, definir un modelo de datos para una base de datos relacional y permitir hacer consultas de todo tipo; no importaba en que lenguaje o tecnología, y allí fue donde tuve mi primer acercamiento con el desarrollo web.
