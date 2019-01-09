@@ -38,9 +38,12 @@ A continuación comparto algunos gifs que muestran como lucia la aplicación y s
 **4. Busqueda de canciones**
 ![4. Busqueda de canciones](demo/search.gif)
 
-Finalmente como ya he aclarado antes, este fue mi primer acercamiento con el desarrollo web, no van a encontrar un código bonito o bien documentado, ni que siga los mejores estandares y prácticas de desarrollo, solo encontraran los mejores esfuerzos que un estudiante de ciencias de la computación transnochado y agobiado por la carga academíca pudo lograr en breve periodo de tiempo.
+**5. Modelo de datos**
+![5. Modelo de datos](demo/db-model.png)
 
-Espero que hayan disfrutado leer esta corta historia y algún día este código le pueda servir de algo a alguien.
+Finalmente como ya he aclarado antes, este fue mi primer acercamiento con el desarrollo web, no van a encontrar un código bonito o bien documentado, ni que siga los mejores estandares y prácticas de desarrollo, solo encontraran los mejores esfuerzos que un estudiante de ciencias de la computación transnochado y agobiado por la carga academíca pudo lograr en un breve periodo de tiempo.
+
+Espero que hayan disfrutado leer esta corta historia y espero que algún día este código le pueda servir de algo a alguien.
 
 --
 
