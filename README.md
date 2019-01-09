@@ -26,20 +26,20 @@ Si alguien desea ver la web funcionando solo debe instalar la última versión d
 
 A continuación comparto algunos gifs que muestran como lucia la aplicación y sus diferentes funcionalidades:
 
-**1. Registro de usuario**
-![1. Registro de usuario](demo/login-and-list-music.gif)
+**1. Modelo de datos**
+![1. Modelo de datos](demo/db-model.png)
 
-**2. Inicio, login y listado de canciones**
-![Inicio, login y listado de canciones](demo/login-and-list-music.gif)
+**2. Registro de usuario**
+![2. Registro de usuario](demo/login-and-list-music.gif)
 
-**3. Agregar canciones, artistas, generos y albumes**
-![3. Agregar canciones, artistas, generos y albumes](demo/add-song.gif)
+**3. Inicio, login y listado de canciones**
+![3. Inicio, login y listado de canciones](demo/login-and-list-music.gif)
 
-**4. Busqueda de canciones**
-![4. Busqueda de canciones](demo/search.gif)
+**4. Agregar canciones, artistas, generos y albumes**
+![4. Agregar canciones, artistas, generos y albumes](demo/add-song.gif)
 
-**5. Modelo de datos**
-![5. Modelo de datos](demo/db-model.png)
+**5. Busqueda de canciones**
+![5. Busqueda de canciones](demo/search.gif)
 
 Finalmente como ya he aclarado antes, este fue mi primer acercamiento con el desarrollo web, no van a encontrar un código bonito o bien documentado, ni que siga los mejores estandares y prácticas de desarrollo, solo encontraran los mejores esfuerzos que un estudiante de ciencias de la computación transnochado y agobiado por la carga academíca pudo lograr en un breve periodo de tiempo.
 
