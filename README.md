@@ -27,7 +27,7 @@ Si alguien desea ver la web funcionando solo debe instalar la última versión d
 A continuación comparto algunos gifs que muestran como lucia la aplicación y sus diferentes funcionalidades:
 
 **1. Registro de usuario**
-![1. Registro de usuario](demo/search.gif)
+![1. Registro de usuario](demo/login-and-list-music.gif)
 
 **2. Inicio, login y listado de canciones**
 ![Inicio, login y listado de canciones](demo/login-and-list-music.gif)
