@@ -2,12 +2,12 @@
     // VER Albumes
     echo '<div id="divtablas">';
 
-	$conexion = new ProjectDB('database/multimedia.db') or die('Ha sido imposible establecer la conexión');
+	$conexion = new ProjectDB('database/multimedia.db') or die('Ha sido imposible establecer la conexiÃ³n');
 
     echo 'ALBUMES';
 	echo '<table border="0" >
 		<tr><td width=30%>Album</td>
-            <td width=5%>Año</td>
+            <td width=5%>AÃ±o</td>
             <td width=5%>#Songs</td>
             <td width=5%>Rank</td>
         </tr>';

@@ -20,7 +20,7 @@
     while ($fila = $resultado->fetchArray(SQLITE3_ASSOC)) {
 
         // dirección del archivo
-        $directorio = $_SERVER['DOCUMENT_ROOT'].'/MusicLibraryPHP/'.$fila['url'];
+        $directorio = $_SERVER['DOCUMENT_ROOT'].'/'.$fila['url'];
 
         if(file_exists($directorio)){
             unlink($directorio);

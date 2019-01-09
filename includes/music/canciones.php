@@ -3,12 +3,12 @@
     // VER Canciones
     echo '<div id="divtablas">';
 
-	$conexion = new ProjectDB('database/multimedia.db') or die('No se pudo establecer conexion');
+    $conexion = new ProjectDB('database/multimedia.db') or die('No se pudo establecer conexion');
 
 
     echo 'CANCIONES';
-	echo '<table border="0" >
-		<tr><td width=30%>Cancion</td>
+    echo '<table border="0" >
+        <tr><td width=30%>Cancion</td>
             <td width=5%>Time</td>
             <td width=10%>Artista</td>
             <td width=10%>Album</td>
@@ -52,7 +52,7 @@
         $consulta = 'SELECT * FROM canciones WHERE idcancion="'.$_GET['song'].'" ';
         $resultado = $conexion->query($consulta);
         while ($fila = $resultado->fetchArray(SQLITE3_ASSOC)) {
-   	        $ruta = $fila['url'];
+            $ruta = $fila['url'];
         }
     }
 
@@ -60,18 +60,18 @@
         echo
         '<audio id="audio" controls = "controls" autoplay="autoplay">
             <source src="'.$ruta.'">
-	       	   Tu navegador no soporta audio HTML5
+               Tu navegador no soporta audio HTML5
         </audio>';
     } else {
         echo
         '<audio id="audio" controls = "controls" >
             <source src="">
-	       	   Tu navegador no soporta audio HTML5
+               Tu navegador no soporta audio HTML5
         </audio>';
     }
 
 
-	$conexion->close();
+    $conexion->close();
 
     echo '</div>';
  ?>

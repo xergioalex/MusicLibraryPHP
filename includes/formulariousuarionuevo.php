@@ -22,7 +22,7 @@
             <tr><td><h2>Sobre ti</h2></td></tr>
    			<tr><td><textarea name="descripcion" cols="40" rows='6' ></textarea></td></tr>
 
-   			<tr><td><h2>Contraseña</h2></td></tr>
+   			<tr><td><h2>ContraseÃ±a</h2></td></tr>
    			<tr><td><input id="inputtextlogin" type="password" name="contrasena" value="" required/></td></tr>
 
    			<tr><td><input id="submitformulariologin" type="submit"/></td></tr>

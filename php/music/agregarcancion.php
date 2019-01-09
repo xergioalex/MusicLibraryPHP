@@ -57,7 +57,8 @@
 //----------------------
 
     // Ruta del servidor
-    $directorio = $_SERVER['DOCUMENT_ROOT'].'/MusicLibraryPHP/usersdb/'.$usuario.'/music/';
+    $directorio = $_SERVER['DOCUMENT_ROOT'].'/usersdb/'.$usuario.'/music/';
+    
     // Url de la cancion
     $urldir= $directorio.$filagenero['nombre'].'/'.$filaartista['nombre'].'/'.$filaalbum['nombre'].'/';
     $urlmusic = 'usersdb/'.$usuario.'/'.'music/'.$filagenero['nombre'].'/'.$filaartista['nombre'].'/'.$filaalbum['nombre'].'/'.$nombrecancion.'.mp3';

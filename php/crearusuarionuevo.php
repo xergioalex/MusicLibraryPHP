@@ -37,7 +37,7 @@
         $resultado = $conexion->query($consulta);
 
         // Ruta del servidor
-        $directorio = $_SERVER['DOCUMENT_ROOT'].'/MusicLibraryPHP/usersdb/'.$usuario.'/';
+        $directorio = $_SERVER['DOCUMENT_ROOT'].'/usersdb/'.$usuario.'/';
 
         if(!(is_dir($directorio))){
             if(!(is_dir($directorio)))

@@ -19,7 +19,7 @@ echo '<div id="divtablas">';
         echo 'ALBUMES';
     	echo '<table border="0" >
     		<tr><td width=30%>Album</td>
-                <td width=5%>Año</td>
+                <td width=5%>A?</td>
                 <td width=5%>#Songs</td>
                 <td width=5%>Rank</td>
             </tr>';

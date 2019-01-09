@@ -11,12 +11,12 @@
 
             <?php
                 if(isset($_GET['exist'])){
-                    echo '<tr><td id="error">El usuario no existe o la contraseña es incorrecta</td></tr>';
+                    echo '<tr><td id="error">El usuario no existe o la contraseÃ±a es incorrecta</td></tr>';
                 }
             ?>
    			<tr><td><h2>Usuario</h2></td></tr>
    			<tr><td><input id="inputtextlogin" type="text" name="usuario" value="" required/></td></tr>
-   			<tr><td><h2>Contraseña</h2></td></tr>
+   			<tr><td><h2>ContraseÃ±a</h2></td></tr>
    			<tr><td><input id="inputtextlogin" type="password" name="contrasena" value="" required/></td></tr>
    			<tr><td><input id="submitformulariologin" type="submit"/></td></tr>
   		</form>
